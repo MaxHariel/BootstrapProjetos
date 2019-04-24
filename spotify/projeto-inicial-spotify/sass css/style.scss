@@ -1,0 +1,24 @@
+@mixin mq($value_mq) {
+    
+    @if $value_mq =='mobile' {
+        @media (min-width: 576px)
+         {
+            @content;
+        }
+    } 
+
+}
+
+.botao{
+
+    @include mq(mobile) {
+        width: 80%;
+    }
+}
+
+h1{
+    @include mq(mobile) {
+        width: 80%;
+    }
+
+}
